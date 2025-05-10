@@ -18,3 +18,5 @@ mcp:
         "run",
         "/Users/zaidalsaheb/projects/ebl-mcp-server/server.py"
       ]
+openai:
+  default_model: "gpt-4.1"
