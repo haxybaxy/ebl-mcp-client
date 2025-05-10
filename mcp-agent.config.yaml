@@ -1,0 +1,20 @@
+$schema: ../../../schema/mcp-agent.config.schema.json
+
+execution_engine: asyncio
+logger:
+  type: console
+  level: info
+  path: "./mcp-agent.log"
+
+mcp:
+  servers:
+    Demo:
+      command: "/opt/homebrew/bin/uv"
+      args: [
+        "run",
+        "--with",
+        "mcp[cli]",
+        "mcp",
+        "run",
+        "/Users/zaidalsaheb/projects/ebl-mcp-server/server.py"
+      ]
