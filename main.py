@@ -27,13 +27,13 @@ async def example_usage():
             server_names=["Demo"],
         )
         async with monsieur:
-            logger.info("finder: Connected to server, calling list_tools...")
+            logger.info("monsieur: Connected to server, calling list_tools...")
             result = await monsieur.list_tools()
             logger.info("Tools available:", data=result.model_dump())
 
             llm = await monsieur.attach_llm(OpenAIAugmentedLLM)
             result = await llm.generate_str(
-                message="can you list all available tickets?",
+                message="Can you create a new for a guest called Zaid Alsaheb with email zaid@gmail.com in room 101 who needs a new key, no need to assign a check in and check out date?",
             )
             logger.info(f"tickets: {result}")
 
